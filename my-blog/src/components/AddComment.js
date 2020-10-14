@@ -1,17 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { InputGroup, FormControl, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-var fs = require('fs');
 
 function AddComment({ comments, setComments }) {
 
     const commentWriterName = useRef()
     const commentContent = useRef()
     const submitCommentBtn = useRef()
-
-    useEffect(()=> {
-        commentWriterName.current.focus()
-    }, [])
 
     const onSubmit = (e) => {
         const date = new Date

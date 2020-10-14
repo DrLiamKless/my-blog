@@ -1,5 +1,6 @@
 .comments-section {
-    width: 100%;
+    width: 70vw;
+    align-self: center;
     background-color: rgba(242,242,242,0.7);
     border: solid 0.1px rgba(0, 0, 0, 0.3);
     box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.404);
