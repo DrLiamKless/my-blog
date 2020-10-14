@@ -26,7 +26,7 @@ function Post() {
             </div>
             </Card.Body>
             <Suspense fallback={<h1>"Loading comments..."</h1>}>
-                <Comments commen={comments} setComments={setComments}/>
+                <Comments comments={comments} setComments={setComments}/>
             </Suspense>
         </Card>
     </div>
