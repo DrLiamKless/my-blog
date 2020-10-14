@@ -38,7 +38,7 @@ function AddComment({ comments, setComments }) {
 
     return (
     <div className="add-comment" style={{margin: '10px'}}>
-        <h1>Add New Comment</h1>
+        <h5>Write Comment</h5>
         <InputGroup size="sm" className="mb-3">
             <InputGroup.Prepend>
                 <InputGroup.Text>Name</InputGroup.Text>

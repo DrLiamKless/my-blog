@@ -7,7 +7,7 @@ import AddComment from './AddComment'
 
 
 
-function Comments({ comments }) {
+function Comments({ comments, setComments }) {
 
     return (
     <div className="comments-section"> 
@@ -19,6 +19,9 @@ function Comments({ comments }) {
                 >
                 </Comment>
             ))}
+        </div>
+        <div className={'add-comment-section'}>
+            <AddComment comments={comments} setComments={setComments}/>
         </div>
     </div>
     );

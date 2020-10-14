@@ -1,4 +1,8 @@
 import React from 'react';
+import { LostPage } from '404-page'
+import '404-page/dist/index.css'
+import face from '../face.png'
+
 
 class ErrorBoundary extends React.Component {
   constructor(props){
@@ -16,7 +20,7 @@ class ErrorBoundary extends React.Component {
     return (
      <div>
       {this.state.isError ?
-      <h1>Something went wrong</h1>
+      <LostPage face={face}/>
       :
       this.props.children
     }
