@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { Card } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Comments from './Comments'
 import AddComment from './AddComment'
+// import Comments from './Comments'
+const Comments = lazy(() => import('./Comments'))
 
 
 
@@ -26,9 +27,9 @@ function Post() {
                 </Card.Text>
             </div>
             </Card.Body>
-            <div className="post-comments">
+            <Suspense fallback={<h1>"Loading comments..."</h1>}>
                 <Comments comments={comments}/>
-            </div>  
+            </Suspense>
         </Card>
         <AddComment comments={comments} setComments={setComments}/>
     </div>
